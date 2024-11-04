@@ -1,0 +1,9 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.19.1
+    hooks:
+      - id: gitlint
+        stages: [commit-msg]
+        args: ["-c", "general.verbosity=2", "-c", "general.ignore=body-is-missing", "-c", "T7.regex=^DEM-.*", "--msg-filename"]
+
